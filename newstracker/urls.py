@@ -21,9 +21,11 @@ urlpatterns = patterns('',
     
 )
  
-#handler500 = 'tracker.views.server_error'
-#handler404 = 'tracker.views.custom_404'
+handler500 = 'tracker.views.error_500'
+handler404 = 'tracker.views.error_404'
 
+
+#testing 404 and 500 pages
 if settings.DEBUG:
 	urlpatterns += patterns('',
 		(r'^404/$', 'django.views.defaults.page_not_found'),
